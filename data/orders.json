@@ -1,0 +1,411 @@
+[
+  {
+    "order_id": "RND-10234",
+    "customer_id": "CUST-001",
+    "status": "shipped",
+    "items": [
+      { "sku": "TNT-2P-AERO", "quantity": 1, "unit_price_eur": 189.0 },
+      { "sku": "MAT-SLEEP-UL", "quantity": 2, "unit_price_eur": 69.0 }
+    ],
+    "total_eur": 327.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-884512",
+    "eta": "2026-06-15",
+    "created_at": "2026-06-10"
+  },
+  {
+    "order_id": "RND-10235",
+    "customer_id": "CUST-002",
+    "status": "preparing",
+    "items": [
+      { "sku": "SHO-GTX-M", "quantity": 1, "unit_price_eur": 159.0 }
+    ],
+    "total_eur": 159.0,
+    "shipping_method": "express",
+    "tracking_number": null,
+    "eta": "2026-06-13",
+    "created_at": "2026-06-11"
+  },
+  {
+    "order_id": "RND-10236",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      { "sku": "BAG-40L-TRK", "quantity": 1, "unit_price_eur": 129.0 },
+      { "sku": "POL-TREK-PR", "quantity": 1, "unit_price_eur": 45.0 }
+    ],
+    "total_eur": 174.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-871203",
+    "eta": "2026-06-05",
+    "created_at": "2026-05-31"
+  },
+  {
+    "order_id": "RND-10237",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      { "sku": "JKT-RAIN-W", "quantity": 1, "unit_price_eur": 99.0 }
+    ],
+    "total_eur": 99.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-863001",
+    "eta": "2026-05-20",
+    "created_at": "2026-05-15"
+  },
+  {
+    "order_id": "RND-10238",
+    "customer_id": "CUST-004",
+    "status": "return_requested",
+    "items": [
+      { "sku": "TNT-3P-DOME", "quantity": 1, "unit_price_eur": 249.0 }
+    ],
+    "total_eur": 249.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-859447",
+    "eta": "2026-05-28",
+    "created_at": "2026-05-22"
+  },
+  {
+    "order_id": "RND-10239",
+    "customer_id": "CUST-005",
+    "status": "refunded",
+    "items": [
+      { "sku": "SHO-TRL-W", "quantity": 1, "unit_price_eur": 119.0 }
+    ],
+    "total_eur": 119.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-845112",
+    "eta": "2026-05-12",
+    "created_at": "2026-05-06"
+  },
+  {
+    "order_id": "RND-10240",
+    "customer_id": "CUST-002",
+    "status": "confirmed",
+    "items": [
+      { "sku": "STV-GAS-MINI", "quantity": 1, "unit_price_eur": 39.0 },
+      { "sku": "WTR-FILTER", "quantity": 1, "unit_price_eur": 49.0 },
+      { "sku": "SOK-MERINO", "quantity": 2, "unit_price_eur": 24.0 }
+    ],
+    "total_eur": 136.0,
+    "shipping_method": "standard",
+    "tracking_number": null,
+    "eta": "2026-06-17",
+    "created_at": "2026-06-12"
+  },
+  {
+    "order_id": "RND-10241",
+    "customer_id": "CUST-003",
+    "status": "shipped",
+    "items": [
+      { "sku": "SLP-BAG-0", "quantity": 1, "unit_price_eur": 89.0 },
+      { "sku": "HDL-TORCH", "quantity": 1, "unit_price_eur": 29.0 }
+    ],
+    "total_eur": 118.0,
+    "shipping_method": "express",
+    "tracking_number": "TRK-FR-889730",
+    "eta": "2026-06-13",
+    "created_at": "2026-06-11"
+  },
+  {
+    "order_id": "RND-10242",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      { "sku": "JKT-DOWN-M", "quantity": 1, "unit_price_eur": 149.0 }
+    ],
+    "total_eur": 149.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-852006",
+    "eta": "2026-06-02",
+    "created_at": "2026-05-27"
+  },
+  {
+    "order_id": "RND-10243",
+    "customer_id": "CUST-005",
+    "status": "preparing",
+    "items": [
+      { "sku": "BAG-20L-DAY", "quantity": 1, "unit_price_eur": 59.0 }
+    ],
+    "total_eur": 59.0,
+    "shipping_method": "standard",
+    "tracking_number": null,
+    "eta": "2026-06-18",
+    "created_at": "2026-06-12"
+  },
+  {
+    "order_id": "RND-10244",
+    "customer_id": "CUST-006",
+    "status": "shipped",
+    "items": [
+      { "sku": "TNT-1P-UL", "quantity": 1, "unit_price_eur": 169.0 },
+      { "sku": "MAT-FOAM", "quantity": 1, "unit_price_eur": 29.0 }
+    ],
+    "total_eur": 198.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-891044",
+    "eta": "2026-06-16",
+    "created_at": "2026-06-11"
+  },
+  {
+    "order_id": "RND-10245",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      { "sku": "WTR-BOTTLE-1", "quantity": 1, "unit_price_eur": 22.0 },
+      { "sku": "GAS-CART-230", "quantity": 2, "unit_price_eur": 7.0 }
+    ],
+    "total_eur": 36.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-868220",
+    "eta": "2026-05-25",
+    "created_at": "2026-05-20"
+  },
+  {
+    "order_id": "RND-10246",
+    "customer_id": "CUST-007",
+    "status": "preparing",
+    "items": [
+      { "sku": "SHO-GTX-W", "quantity": 1, "unit_price_eur": 159.0 }
+    ],
+    "total_eur": 159.0,
+    "shipping_method": "express",
+    "tracking_number": null,
+    "eta": "2026-06-17",
+    "created_at": "2026-06-13"
+  },
+  {
+    "order_id": "RND-10247",
+    "customer_id": "CUST-008",
+    "status": "confirmed",
+    "items": [
+      { "sku": "BAG-60L-EXP", "quantity": 1, "unit_price_eur": 179.0 },
+      { "sku": "SLP-DOWN-M5", "quantity": 1, "unit_price_eur": 199.0 }
+    ],
+    "total_eur": 378.0,
+    "shipping_method": "standard",
+    "tracking_number": null,
+    "eta": "2026-06-19",
+    "created_at": "2026-06-14"
+  },
+  {
+    "order_id": "RND-10248",
+    "customer_id": "CUST-008",
+    "status": "delivered",
+    "items": [
+      { "sku": "COMPASS", "quantity": 1, "unit_price_eur": 18.0 },
+      { "sku": "KIT-FIRSTAID", "quantity": 1, "unit_price_eur": 34.0 }
+    ],
+    "total_eur": 52.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-855910",
+    "eta": "2026-05-18",
+    "created_at": "2026-05-13"
+  },
+  {
+    "order_id": "RND-10249",
+    "customer_id": "CUST-009",
+    "status": "shipped",
+    "items": [
+      { "sku": "JKT-FLEECE-W", "quantity": 1, "unit_price_eur": 59.0 },
+      { "sku": "PAN-TREK-W", "quantity": 1, "unit_price_eur": 69.0 }
+    ],
+    "total_eur": 128.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-892371",
+    "eta": "2026-06-16",
+    "created_at": "2026-06-10"
+  },
+  {
+    "order_id": "RND-10250",
+    "customer_id": "CUST-010",
+    "status": "return_requested",
+    "items": [
+      { "sku": "TNT-4P-FAM", "quantity": 1, "unit_price_eur": 329.0 }
+    ],
+    "total_eur": 329.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-849005",
+    "eta": "2026-05-30",
+    "created_at": "2026-05-24"
+  },
+  {
+    "order_id": "RND-10251",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      { "sku": "SEAT-PAD", "quantity": 2, "unit_price_eur": 15.0 },
+      { "sku": "PIL-CAMP", "quantity": 1, "unit_price_eur": 19.0 }
+    ],
+    "total_eur": 49.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-861447",
+    "eta": "2026-06-01",
+    "created_at": "2026-05-26"
+  },
+  {
+    "order_id": "RND-10252",
+    "customer_id": "CUST-011",
+    "status": "preparing",
+    "items": [
+      { "sku": "SHO-TRL-M", "quantity": 1, "unit_price_eur": 119.0 }
+    ],
+    "total_eur": 119.0,
+    "shipping_method": "express",
+    "tracking_number": null,
+    "eta": "2026-06-17",
+    "created_at": "2026-06-14"
+  },
+  {
+    "order_id": "RND-10253",
+    "customer_id": "CUST-012",
+    "status": "shipped",
+    "items": [
+      { "sku": "HDL-RECHARGE", "quantity": 1, "unit_price_eur": 49.0 },
+      { "sku": "WTR-FILTER", "quantity": 1, "unit_price_eur": 49.0 }
+    ],
+    "total_eur": 98.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-893118",
+    "eta": "2026-06-16",
+    "created_at": "2026-06-11"
+  },
+  {
+    "order_id": "RND-10254",
+    "customer_id": "CUST-012",
+    "status": "confirmed",
+    "items": [
+      { "sku": "GPS-HAND", "quantity": 1, "unit_price_eur": 199.0 }
+    ],
+    "total_eur": 199.0,
+    "shipping_method": "express",
+    "tracking_number": null,
+    "eta": "2026-06-18",
+    "created_at": "2026-06-14"
+  },
+  {
+    "order_id": "RND-10255",
+    "customer_id": "CUST-013",
+    "status": "delivered",
+    "items": [
+      { "sku": "TNT-2P-4S", "quantity": 1, "unit_price_eur": 359.0 },
+      { "sku": "GAITERS", "quantity": 1, "unit_price_eur": 35.0 }
+    ],
+    "total_eur": 394.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-843778",
+    "eta": "2026-05-10",
+    "created_at": "2026-05-04"
+  },
+  {
+    "order_id": "RND-10256",
+    "customer_id": "CUST-014",
+    "status": "shipped",
+    "items": [
+      { "sku": "BAS-MERINO-M", "quantity": 2, "unit_price_eur": 49.0 },
+      { "sku": "SOK-MERINO", "quantity": 1, "unit_price_eur": 24.0 }
+    ],
+    "total_eur": 122.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-890562",
+    "eta": "2026-06-16",
+    "created_at": "2026-06-12"
+  },
+  {
+    "order_id": "RND-10257",
+    "customer_id": "CUST-014",
+    "status": "refunded",
+    "items": [
+      { "sku": "KNF-MULTI", "quantity": 1, "unit_price_eur": 39.0 }
+    ],
+    "total_eur": 39.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-838201",
+    "eta": "2026-04-28",
+    "created_at": "2026-04-22"
+  },
+  {
+    "order_id": "RND-10258",
+    "customer_id": "CUST-015",
+    "status": "preparing",
+    "items": [
+      { "sku": "BAG-30L-WMN", "quantity": 1, "unit_price_eur": 109.0 },
+      { "sku": "HAT-SUN", "quantity": 1, "unit_price_eur": 19.0 }
+    ],
+    "total_eur": 128.0,
+    "shipping_method": "standard",
+    "tracking_number": null,
+    "eta": "2026-06-19",
+    "created_at": "2026-06-13"
+  },
+  {
+    "order_id": "RND-10259",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      { "sku": "STV-WOOD", "quantity": 1, "unit_price_eur": 35.0 },
+      { "sku": "COK-SET-2", "quantity": 1, "unit_price_eur": 39.0 }
+    ],
+    "total_eur": 74.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-857334",
+    "eta": "2026-05-22",
+    "created_at": "2026-05-16"
+  },
+  {
+    "order_id": "RND-10260",
+    "customer_id": "CUST-002",
+    "status": "shipped",
+    "items": [
+      { "sku": "SHO-SANDAL", "quantity": 1, "unit_price_eur": 69.0 },
+      { "sku": "GLV-LINER", "quantity": 1, "unit_price_eur": 19.0 }
+    ],
+    "total_eur": 88.0,
+    "shipping_method": "express",
+    "tracking_number": "TRK-FR-894501",
+    "eta": "2026-06-16",
+    "created_at": "2026-06-14"
+  },
+  {
+    "order_id": "RND-10261",
+    "customer_id": "CUST-003",
+    "status": "confirmed",
+    "items": [
+      { "sku": "SLP-BAG-10", "quantity": 1, "unit_price_eur": 69.0 }
+    ],
+    "total_eur": 69.0,
+    "shipping_method": "standard",
+    "tracking_number": null,
+    "eta": "2026-06-20",
+    "created_at": "2026-06-15"
+  },
+  {
+    "order_id": "RND-10262",
+    "customer_id": "CUST-004",
+    "status": "return_requested",
+    "items": [
+      { "sku": "TNT-TARP", "quantity": 1, "unit_price_eur": 79.0 },
+      { "sku": "BAG-DRY-15", "quantity": 1, "unit_price_eur": 29.0 }
+    ],
+    "total_eur": 108.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-866712",
+    "eta": "2026-06-03",
+    "created_at": "2026-05-28"
+  },
+  {
+    "order_id": "RND-10263",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      { "sku": "JKT-RAIN-M", "quantity": 1, "unit_price_eur": 99.0 },
+      { "sku": "PAN-TREK-M", "quantity": 1, "unit_price_eur": 69.0 }
+    ],
+    "total_eur": 168.0,
+    "shipping_method": "standard",
+    "tracking_number": "TRK-FR-859988",
+    "eta": "2026-05-29",
+    "created_at": "2026-05-23"
+  }
+]

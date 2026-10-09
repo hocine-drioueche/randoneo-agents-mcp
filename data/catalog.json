@@ -1,0 +1,461 @@
+[
+  {
+    "sku": "TNT-2P-AERO",
+    "name": "Tente Aero 2 places",
+    "category": "Tentes",
+    "price_eur": 189.0,
+    "stock": 12,
+    "attributes": { "places": 2, "weight_g": 1900, "waterproof": true, "waterproof_mm": 3000, "seasons": 3 },
+    "description": "Tente légère 2 places, double-toit déperlant 3000 mm, idéale pour le trek 3 saisons. Montage 2 arceaux en 5 minutes."
+  },
+  {
+    "sku": "TNT-3P-DOME",
+    "name": "Tente Dôme 3 places",
+    "category": "Tentes",
+    "price_eur": 249.0,
+    "stock": 0,
+    "attributes": { "places": 3, "weight_g": 3200, "waterproof": true, "waterproof_mm": 4000, "seasons": 3 },
+    "description": "Tente dôme spacieuse 3 places avec grande abside. Colonne d'eau 4000 mm. Parfaite pour le camping en famille."
+  },
+  {
+    "sku": "TNT-1P-UL",
+    "name": "Tente Ultralight 1 place",
+    "category": "Tentes",
+    "price_eur": 169.0,
+    "stock": 17,
+    "attributes": { "places": 1, "weight_g": 1100, "waterproof": true, "waterproof_mm": 3000, "seasons": 3 },
+    "description": "Tente solo ultralégère 1100 g, idéale pour la randonnée rapide et le bikepacking. Mât unique, montage minute."
+  },
+  {
+    "sku": "TNT-4P-FAM",
+    "name": "Tente familiale 4 places",
+    "category": "Tentes",
+    "price_eur": 329.0,
+    "stock": 7,
+    "attributes": { "places": 4, "weight_g": 5800, "waterproof": true, "waterproof_mm": 4000, "seasons": 3 },
+    "description": "Grande tente familiale 4 places avec deux chambres et séjour central. Hauteur debout, idéale pour le camping fixe."
+  },
+  {
+    "sku": "TNT-2P-4S",
+    "name": "Tente 2 places 4 saisons",
+    "category": "Tentes",
+    "price_eur": 359.0,
+    "stock": 5,
+    "attributes": { "places": 2, "weight_g": 2700, "waterproof": true, "waterproof_mm": 5000, "seasons": 4 },
+    "description": "Tente expédition 4 saisons, structure renforcée résistante au vent et à la neige. Colonne d'eau 5000 mm."
+  },
+  {
+    "sku": "TNT-TARP",
+    "name": "Tarp abri ultraléger",
+    "category": "Tentes",
+    "price_eur": 79.0,
+    "stock": 26,
+    "attributes": { "weight_g": 480, "waterproof": true, "waterproof_mm": 3000, "size_cm": [300, 290] },
+    "description": "Tarp polyvalent 3 x 2,9 m, 480 g. Multiples points d'ancrage pour de nombreuses configurations d'abri. Sardines incluses."
+  },
+  {
+    "sku": "BAG-40L-TRK",
+    "name": "Sac à dos Trek 40L",
+    "category": "Sacs",
+    "price_eur": 129.0,
+    "stock": 23,
+    "attributes": { "capacity_l": 40, "weight_g": 1300, "waterproof": false, "rain_cover": true },
+    "description": "Sac à dos de randonnée 40L, dos ventilé, housse anti-pluie incluse. Idéal pour les sorties de 2 à 4 jours."
+  },
+  {
+    "sku": "BAG-20L-DAY",
+    "name": "Sac à dos Daypack 20L",
+    "category": "Sacs",
+    "price_eur": 59.0,
+    "stock": 41,
+    "attributes": { "capacity_l": 20, "weight_g": 600, "waterproof": false, "rain_cover": false },
+    "description": "Petit sac 20L pour les sorties à la journée. Poche hydratation compatible, léger et compact."
+  },
+  {
+    "sku": "BAG-60L-EXP",
+    "name": "Sac à dos Expédition 60L",
+    "category": "Sacs",
+    "price_eur": 179.0,
+    "stock": 11,
+    "attributes": { "capacity_l": 60, "weight_g": 1950, "waterproof": false, "rain_cover": true },
+    "description": "Sac à dos d'expédition 60L à armature réglable, ceinture lombaire renforcée. Pour les treks longs et l'autonomie."
+  },
+  {
+    "sku": "BAG-30L-WMN",
+    "name": "Sac à dos 30L (femme)",
+    "category": "Sacs",
+    "price_eur": 109.0,
+    "stock": 18,
+    "attributes": { "gender": "femme", "capacity_l": 30, "weight_g": 1050, "waterproof": false, "rain_cover": true },
+    "description": "Sac à dos 30L à portage féminin, bretelles ergonomiques et dos ventilé. Housse anti-pluie incluse."
+  },
+  {
+    "sku": "BAG-10L-HYD",
+    "name": "Sac d'hydratation 10L",
+    "category": "Sacs",
+    "price_eur": 39.0,
+    "stock": 34,
+    "attributes": { "capacity_l": 10, "weight_g": 300, "waterproof": false, "reservoir_l": 2 },
+    "description": "Sac de trail 10L avec poche à eau 2L incluse. Maintien près du corps, idéal course et randonnée rapide."
+  },
+  {
+    "sku": "BAG-DRY-15",
+    "name": "Sac étanche 15L",
+    "category": "Sacs",
+    "price_eur": 29.0,
+    "stock": 47,
+    "attributes": { "capacity_l": 15, "weight_g": 180, "waterproof": true, "closure": "roll-top" },
+    "description": "Sac étanche 15L à fermeture roll-top, garde vos affaires au sec en kayak, packraft ou sous la pluie."
+  },
+  {
+    "sku": "SHO-GTX-M",
+    "name": "Chaussures GTX (homme)",
+    "category": "Chaussures",
+    "price_eur": 159.0,
+    "stock": 8,
+    "attributes": { "gender": "homme", "waterproof": true, "membrane": "Gore-Tex", "weight_g": 980, "sizes": [40, 41, 42, 43, 44, 45, 46] },
+    "description": "Chaussures de randonnée montantes à membrane Gore-Tex imperméable et respirante. Semelle Vibram, bon maintien de la cheville."
+  },
+  {
+    "sku": "SHO-TRL-W",
+    "name": "Chaussures de trail (femme)",
+    "category": "Chaussures",
+    "price_eur": 119.0,
+    "stock": 15,
+    "attributes": { "gender": "femme", "waterproof": false, "weight_g": 540, "sizes": [36, 37, 38, 39, 40, 41, 42] },
+    "description": "Chaussures de trail légères et respirantes, accroche dynamique sur terrain sec. Non imperméables (mesh aéré)."
+  },
+  {
+    "sku": "SHO-GTX-W",
+    "name": "Chaussures GTX (femme)",
+    "category": "Chaussures",
+    "price_eur": 159.0,
+    "stock": 13,
+    "attributes": { "gender": "femme", "waterproof": true, "membrane": "Gore-Tex", "weight_g": 860, "sizes": [36, 37, 38, 39, 40, 41, 42] },
+    "description": "Chaussures de randonnée montantes femme à membrane Gore-Tex. Semelle Vibram, excellent maintien sur terrain technique."
+  },
+  {
+    "sku": "SHO-TRL-M",
+    "name": "Chaussures de trail (homme)",
+    "category": "Chaussures",
+    "price_eur": 119.0,
+    "stock": 16,
+    "attributes": { "gender": "homme", "waterproof": false, "weight_g": 620, "sizes": [40, 41, 42, 43, 44, 45, 46] },
+    "description": "Chaussures de trail homme légères et respirantes, accroche dynamique sur terrain sec. Non imperméables (mesh aéré)."
+  },
+  {
+    "sku": "SHO-APP-M",
+    "name": "Chaussures d'approche (homme)",
+    "category": "Chaussures",
+    "price_eur": 139.0,
+    "stock": 9,
+    "attributes": { "gender": "homme", "waterproof": false, "weight_g": 760, "sizes": [40, 41, 42, 43, 44, 45] },
+    "description": "Chaussures d'approche basses à gomme adhérente, parfaites pour le rocher et les sentiers techniques. Laçage jusqu'aux orteils."
+  },
+  {
+    "sku": "SHO-SANDAL",
+    "name": "Sandales de randonnée",
+    "category": "Chaussures",
+    "price_eur": 69.0,
+    "stock": 22,
+    "attributes": { "gender": "mixte", "waterproof": false, "weight_g": 420, "sizes": [37, 38, 39, 40, 41, 42, 43, 44, 45] },
+    "description": "Sandales de randonnée à séchage rapide, semelle crantée. Idéales pour les gués, le bivouac et les randonnées aquatiques."
+  },
+  {
+    "sku": "SLP-BAG-0",
+    "name": "Sac de couchage 0°C",
+    "category": "Couchage",
+    "price_eur": 89.0,
+    "stock": 19,
+    "attributes": { "temperature_comfort_c": 0, "temperature_limit_c": -5, "weight_g": 1400, "filling": "synthétique" },
+    "description": "Sac de couchage sarcophage, confort 0 °C, garnissage synthétique séchage rapide. Capuche ajustable."
+  },
+  {
+    "sku": "MAT-SLEEP-UL",
+    "name": "Matelas gonflable ultraléger",
+    "category": "Couchage",
+    "price_eur": 69.0,
+    "stock": 27,
+    "attributes": { "weight_g": 480, "thickness_cm": 7, "r_value": 3.2, "packed_size": "compact" },
+    "description": "Matelas gonflable ultraléger, 7 cm d'épaisseur, R-value 3,2. Gonflage en 15 souffles, sac de rangement inclus."
+  },
+  {
+    "sku": "SLP-BAG-10",
+    "name": "Sac de couchage 10°C",
+    "category": "Couchage",
+    "price_eur": 69.0,
+    "stock": 31,
+    "attributes": { "temperature_comfort_c": 10, "temperature_limit_c": 5, "weight_g": 900, "filling": "synthétique" },
+    "description": "Sac de couchage léger 3 saisons douces, confort 10 °C. Garnissage synthétique compressible, idéal randonnée estivale."
+  },
+  {
+    "sku": "SLP-DOWN-M5",
+    "name": "Sac de couchage duvet -5°C",
+    "category": "Couchage",
+    "price_eur": 199.0,
+    "stock": 10,
+    "attributes": { "temperature_comfort_c": -5, "temperature_limit_c": -12, "weight_g": 1050, "filling": "duvet 650 cuin" },
+    "description": "Sac de couchage en duvet 650 cuin, confort -5 °C pour seulement 1050 g. Très compressible, idéal trek hivernal."
+  },
+  {
+    "sku": "MAT-FOAM",
+    "name": "Matelas mousse pliable",
+    "category": "Couchage",
+    "price_eur": 29.0,
+    "stock": 38,
+    "attributes": { "weight_g": 410, "thickness_cm": 2, "r_value": 2.0, "type": "mousse alvéolée" },
+    "description": "Matelas en mousse alvéolée, indéchirable et indéperdable. Aucun gonflage, déploiement instantané. Robuste et économique."
+  },
+  {
+    "sku": "PIL-CAMP",
+    "name": "Oreiller de camping gonflable",
+    "category": "Couchage",
+    "price_eur": 19.0,
+    "stock": 44,
+    "attributes": { "weight_g": 80, "inflatable": true, "packed_size": "poche" },
+    "description": "Oreiller gonflable 80 g, surface contact douce, valve réglable. Se range dans la paume de la main."
+  },
+  {
+    "sku": "STV-GAS-MINI",
+    "name": "Réchaud gaz Mini",
+    "category": "Réchauds",
+    "price_eur": 39.0,
+    "stock": 33,
+    "attributes": { "type": "gaz", "weight_g": 95, "ignition": "piézo", "cartridge_included": false },
+    "description": "Réchaud à gaz ultra-compact 95 g avec allumage piézo. Cartouche à visser non incluse."
+  },
+  {
+    "sku": "STV-MULTI",
+    "name": "Réchaud multicombustible",
+    "category": "Réchauds",
+    "price_eur": 89.0,
+    "stock": 6,
+    "attributes": { "type": "multicombustible", "weight_g": 420, "ignition": "manuelle", "cartridge_included": false },
+    "description": "Réchaud multicombustible (essence, pétrole, gaz) pour expéditions et grand froid. Pompe et kit d'entretien fournis."
+  },
+  {
+    "sku": "STV-ALC",
+    "name": "Réchaud à alcool",
+    "category": "Réchauds",
+    "price_eur": 25.0,
+    "stock": 29,
+    "attributes": { "type": "alcool", "weight_g": 110, "ignition": "manuelle", "fuel_included": false },
+    "description": "Réchaud à alcool silencieux et sans pièce mécanique. Léger et fiable, idéal pour les randonneurs minimalistes."
+  },
+  {
+    "sku": "STV-WOOD",
+    "name": "Réchaud à bois",
+    "category": "Réchauds",
+    "price_eur": 35.0,
+    "stock": 20,
+    "attributes": { "type": "bois", "weight_g": 320, "ignition": "manuelle", "fuel_included": false },
+    "description": "Réchaud à bois en inox pliable, fonctionne avec brindilles et pommes de pin. Zéro cartouche à transporter."
+  },
+  {
+    "sku": "COK-SET-2",
+    "name": "Kit popote 2 personnes",
+    "category": "Réchauds",
+    "price_eur": 39.0,
+    "stock": 24,
+    "attributes": { "weight_g": 380, "material": "aluminium anodisé", "pieces": 4, "non_stick": true },
+    "description": "Kit popote 2 personnes : 2 casseroles antiadhésives + couvercle/poêle, poignée pliable amovible. S'emboîte pour le transport."
+  },
+  {
+    "sku": "GAS-CART-230",
+    "name": "Cartouche gaz 230g",
+    "category": "Réchauds",
+    "price_eur": 7.0,
+    "stock": 80,
+    "attributes": { "type": "gaz", "weight_g": 230, "valve": "EN 417", "mix": "butane/propane" },
+    "description": "Cartouche de gaz à visser 230 g (mélange butane/propane), norme EN 417. Compatible avec la plupart des réchauds à visser."
+  },
+  {
+    "sku": "JKT-RAIN-W",
+    "name": "Veste imperméable (femme)",
+    "category": "Vêtements",
+    "price_eur": 99.0,
+    "stock": 21,
+    "attributes": { "gender": "femme", "waterproof": true, "waterproof_mm": 10000, "breathable": true, "weight_g": 320, "sizes": ["XS", "S", "M", "L", "XL"] },
+    "description": "Veste de pluie 3 couches, imperméabilité 10 000 mm, coutures étanchées, capuche ajustable. Respirante et compressible."
+  },
+  {
+    "sku": "JKT-DOWN-M",
+    "name": "Doudoune (homme)",
+    "category": "Vêtements",
+    "price_eur": 149.0,
+    "stock": 14,
+    "attributes": { "gender": "homme", "waterproof": false, "filling": "duvet 700 cuin", "weight_g": 380, "sizes": ["S", "M", "L", "XL", "XXL"] },
+    "description": "Doudoune en duvet 700 cuin, chaude et compressible. Coupe-vent mais non imperméable : à protéger sous la pluie."
+  },
+  {
+    "sku": "JKT-RAIN-M",
+    "name": "Veste imperméable (homme)",
+    "category": "Vêtements",
+    "price_eur": 99.0,
+    "stock": 19,
+    "attributes": { "gender": "homme", "waterproof": true, "waterproof_mm": 10000, "breathable": true, "weight_g": 360, "sizes": ["S", "M", "L", "XL", "XXL"] },
+    "description": "Veste de pluie homme 3 couches, imperméabilité 10 000 mm, coutures étanchées, capuche ajustable. Respirante et compressible."
+  },
+  {
+    "sku": "JKT-FLEECE-W",
+    "name": "Polaire (femme)",
+    "category": "Vêtements",
+    "price_eur": 59.0,
+    "stock": 28,
+    "attributes": { "gender": "femme", "waterproof": false, "material": "polaire 200 g/m²", "weight_g": 300, "sizes": ["XS", "S", "M", "L", "XL"] },
+    "description": "Polaire chaude et respirante 200 g/m², à porter seule ou en couche intermédiaire. Poches zippées, coupe ajustée."
+  },
+  {
+    "sku": "PAN-TREK-M",
+    "name": "Pantalon de randonnée (homme)",
+    "category": "Vêtements",
+    "price_eur": 69.0,
+    "stock": 25,
+    "attributes": { "gender": "homme", "waterproof": false, "convertible": true, "weight_g": 380, "sizes": ["38", "40", "42", "44", "46", "48"] },
+    "description": "Pantalon de randonnée déperlant et stretch, jambes zippées convertibles en short. Séchage rapide, ceinture élastiquée."
+  },
+  {
+    "sku": "PAN-TREK-W",
+    "name": "Pantalon de randonnée (femme)",
+    "category": "Vêtements",
+    "price_eur": 69.0,
+    "stock": 23,
+    "attributes": { "gender": "femme", "waterproof": false, "convertible": false, "weight_g": 320, "sizes": ["34", "36", "38", "40", "42", "44"] },
+    "description": "Pantalon de randonnée femme déperlant et stretch, coupe ajustée. Séchage rapide, genoux préformés pour la liberté de mouvement."
+  },
+  {
+    "sku": "BAS-MERINO-M",
+    "name": "Sous-vêtement mérinos (homme)",
+    "category": "Vêtements",
+    "price_eur": 49.0,
+    "stock": 32,
+    "attributes": { "gender": "homme", "material": "laine mérinos", "weight_g": 200, "sizes": ["S", "M", "L", "XL"] },
+    "description": "Haut technique en laine mérinos, thermorégulateur et anti-odeurs. Couche de base idéale par temps froid."
+  },
+  {
+    "sku": "SOK-MERINO",
+    "name": "Chaussettes mérinos (lot de 2)",
+    "category": "Vêtements",
+    "price_eur": 24.0,
+    "stock": 60,
+    "attributes": { "material": "laine mérinos", "pack": 2, "sizes": ["S", "M", "L"] },
+    "description": "Lot de 2 paires de chaussettes en laine mérinos, thermorégulatrices et anti-odeurs. Confort en toutes saisons."
+  },
+  {
+    "sku": "HAT-SUN",
+    "name": "Chapeau de soleil",
+    "category": "Vêtements",
+    "price_eur": 19.0,
+    "stock": 49,
+    "attributes": { "upf": 50, "weight_g": 90, "material": "nylon respirant", "sizes": ["S/M", "L/XL"] },
+    "description": "Chapeau de randonnée à large bord, protection UPF 50+, mentonnière amovible. Léger et respirant, séchage rapide."
+  },
+  {
+    "sku": "GLV-LINER",
+    "name": "Sous-gants techniques",
+    "category": "Vêtements",
+    "price_eur": 19.0,
+    "stock": 36,
+    "attributes": { "material": "polaire élasthanne", "touchscreen": true, "weight_g": 50, "sizes": ["S", "M", "L"] },
+    "description": "Sous-gants fins et chauds, compatibles écran tactile. À porter seuls en mi-saison ou sous des moufles l'hiver."
+  },
+  {
+    "sku": "HDL-TORCH",
+    "name": "Lampe frontale 300 lm",
+    "category": "Accessoires",
+    "price_eur": 29.0,
+    "stock": 52,
+    "attributes": { "lumens": 300, "weight_g": 85, "waterproof": true, "ip_rating": "IPX4", "battery": "AAA" },
+    "description": "Lampe frontale 300 lumens, 3 modes d'éclairage, résistante aux projections d'eau (IPX4). Piles AAA incluses."
+  },
+  {
+    "sku": "HDL-RECHARGE",
+    "name": "Lampe frontale rechargeable 500 lm",
+    "category": "Accessoires",
+    "price_eur": 49.0,
+    "stock": 27,
+    "attributes": { "lumens": 500, "weight_g": 95, "waterproof": true, "ip_rating": "IPX5", "battery": "Li-ion USB-C" },
+    "description": "Lampe frontale rechargeable USB-C 500 lumens, batterie Li-ion intégrée, mode rouge. Étanche IPX5, autonomie jusqu'à 40 h."
+  },
+  {
+    "sku": "WTR-FILTER",
+    "name": "Filtre à eau de randonnée",
+    "category": "Accessoires",
+    "price_eur": 49.0,
+    "stock": 18,
+    "attributes": { "weight_g": 65, "filtration_micron": 0.1, "capacity_l": 2000 },
+    "description": "Filtre à eau à fibres creuses 0,1 micron, jusqu'à 2000 L. Élimine bactéries et protozoaires. Se visse sur la plupart des gourdes."
+  },
+  {
+    "sku": "WTR-BOTTLE-1",
+    "name": "Gourde 1L",
+    "category": "Accessoires",
+    "price_eur": 22.0,
+    "stock": 55,
+    "attributes": { "capacity_l": 1, "weight_g": 120, "material": "tritan sans BPA", "leakproof": true },
+    "description": "Gourde 1L en tritan sans BPA, bouchon étanche à large goulot. Graduations volumétriques, compatible glaçons."
+  },
+  {
+    "sku": "POL-TREK-PR",
+    "name": "Bâtons de randonnée (paire)",
+    "category": "Accessoires",
+    "price_eur": 45.0,
+    "stock": 30,
+    "attributes": { "material": "aluminium", "weight_g": 480, "adjustable": true, "length_cm": [65, 135] },
+    "description": "Paire de bâtons télescopiques en aluminium, réglables de 65 à 135 cm, poignées liège, rondelles neige incluses."
+  },
+  {
+    "sku": "KIT-FIRSTAID",
+    "name": "Trousse de secours",
+    "category": "Accessoires",
+    "price_eur": 34.0,
+    "stock": 31,
+    "attributes": { "weight_g": 280, "pieces": 42, "waterproof": true, "case": "pochette étanche" },
+    "description": "Trousse de premiers secours 42 pièces en pochette étanche : pansements, compresses, désinfectant, couverture de survie."
+  },
+  {
+    "sku": "COMPASS",
+    "name": "Boussole de randonnée",
+    "category": "Accessoires",
+    "price_eur": 18.0,
+    "stock": 43,
+    "attributes": { "weight_g": 40, "type": "à plaquette", "declination_adjust": true, "luminescent": true },
+    "description": "Boussole à plaquette avec règle, miroir de visée et réglage de déclinaison. Éléments luminescents pour la lecture nocturne."
+  },
+  {
+    "sku": "GPS-HAND",
+    "name": "GPS de randonnée portatif",
+    "category": "Accessoires",
+    "price_eur": 199.0,
+    "stock": 6,
+    "attributes": { "weight_g": 230, "screen_in": 2.6, "battery_h": 25, "waterproof": true, "ip_rating": "IPX7" },
+    "description": "GPS portatif robuste, écran 2,6 pouces lisible au soleil, cartographie topo préchargée. Étanche IPX7, autonomie 25 h."
+  },
+  {
+    "sku": "KNF-MULTI",
+    "name": "Couteau multifonction",
+    "category": "Accessoires",
+    "price_eur": 39.0,
+    "stock": 37,
+    "attributes": { "weight_g": 130, "tools": 12, "material": "acier inoxydable", "lockable": true },
+    "description": "Couteau multifonction 12 outils : lame verrouillable, scie, ciseaux, tournevis, décapsuleur. Manche ergonomique antidérapant."
+  },
+  {
+    "sku": "SEAT-PAD",
+    "name": "Coussin d'assise isolant",
+    "category": "Accessoires",
+    "price_eur": 15.0,
+    "stock": 50,
+    "attributes": { "weight_g": 65, "material": "mousse XPE", "foldable": true, "r_value": 1.5 },
+    "description": "Coussin d'assise pliable en mousse XPE, isole du froid et de l'humidité lors des pauses. Ultraléger, se clipse au sac."
+  },
+  {
+    "sku": "GAITERS",
+    "name": "Guêtres imperméables",
+    "category": "Accessoires",
+    "price_eur": 35.0,
+    "stock": 24,
+    "attributes": { "waterproof": true, "weight_g": 240, "sizes": ["S/M", "L/XL"], "closure": "scratch + crochet" },
+    "description": "Guêtres imperméables et respirantes, protègent de la boue, la neige et les débris. Sangle sous-pied renforcée."
+  }
+]

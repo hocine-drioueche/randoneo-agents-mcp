@@ -1,0 +1,90 @@
+{
+  "retour": {
+    "categorie": "politique",
+    "text": "Vous disposez de 30 jours pour retourner un article non utilisé, retour gratuit via étiquette prépayée."
+  },
+  "remboursement": {
+    "categorie": "politique",
+    "text": "Le remboursement est effectué sous 14 jours sur le moyen de paiement d'origine après contrôle du colis."
+  },
+  "echange": {
+    "categorie": "politique",
+    "text": "Vous pouvez demander un échange de taille ou de coloris plutôt qu'un remboursement."
+  },
+  "livraison_std": {
+    "categorie": "politique",
+    "text": "La livraison standard est offerte dès 60 euros et arrive en 3 à 5 jours ouvrés."
+  },
+  "livraison_exp": {
+    "categorie": "politique",
+    "text": "La livraison express en 24 heures coûte 9,90 euros pour toute commande avant 14h."
+  },
+  "paiement_3x": {
+    "categorie": "politique",
+    "text": "Le paiement en 3 ou 4 fois sans frais est disponible dès 100 euros d'achat."
+  },
+  "moyens_paiement": {
+    "categorie": "politique",
+    "text": "Nous acceptons les cartes Visa, Mastercard et PayPal, transactions sécurisées 3D Secure."
+  },
+  "garantie": {
+    "categorie": "politique",
+    "text": "Tous les produits ont la garantie légale de conformité de 2 ans."
+  },
+  "suivi": {
+    "categorie": "politique",
+    "text": "Un numéro de suivi est envoyé à l'expédition ; le statut est visible dans votre espace client."
+  },
+  "annulation": {
+    "categorie": "politique",
+    "text": "Tant que la commande n'est pas en préparation, vous pouvez la modifier ou l'annuler en ligne."
+  },
+  "fidelite": {
+    "categorie": "politique",
+    "text": "Le programme Randoneo Plus est gratuit et cumule 1 point par euro dépensé, convertible en bons."
+  },
+  "rgpd": {
+    "categorie": "politique",
+    "text": "Conformément au RGPD vous pouvez supprimer vos données et fermer votre compte à tout moment."
+  },
+  "tente_aero": {
+    "categorie": "produit",
+    "text": "La tente Aero 2 places pèse 1,9 kg, déperlante colonne d'eau 3000 mm, montée en 5 minutes."
+  },
+  "tente_dome": {
+    "categorie": "produit",
+    "text": "La tente Dôme 4 places, spacieuse et stable au vent, pèse 4,2 kg, idéale en camping familial."
+  },
+  "sac_50": {
+    "categorie": "produit",
+    "text": "Le sac à dos Trek 50 litres convient aux sorties de 2 à 5 jours, ceinture ventrale ergonomique."
+  },
+  "chaussures_gtx": {
+    "categorie": "produit",
+    "text": "Les chaussures Trek GTX sont imperméables grâce à la membrane Gore-Tex, semelle Vibram."
+  },
+  "chaussures_trail": {
+    "categorie": "produit",
+    "text": "Les chaussures Trail Run légères et respirantes sont conçues pour la course sur sentier."
+  },
+  "rechaud_mini": {
+    "categorie": "produit",
+    "text": "Le réchaud Mini de 90 g porte 1 litre d'eau à ébullition en 3 minutes, cartouche non incluse."
+  },
+  "rechaud_duo": {
+    "categorie": "produit",
+    "text": "Le réchaud Duo à deux feux convient à la cuisine de groupe au campement."
+  },
+  "veste_imper": {
+    "categorie": "produit",
+    "text": "La veste Imper Light coupe-vent imperméable de 280 g, colonne d'eau 10000 mm, capuche ajustable."
+  },
+  "doudoune": {
+    "categorie": "produit",
+    "text": "La doudoune Warm en duvet offre une isolation thermique pour le froid, compressible."
+  },
+  "gourde": {
+    "categorie": "produit",
+    "text": "La gourde filtrante purifie l'eau des rivières et ruisseaux pour la rendre potable en randonnée."
+  }
+}

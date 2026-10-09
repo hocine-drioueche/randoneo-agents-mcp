@@ -1,0 +1,38 @@
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+
+# Base de données
+*.sqlite
+*.sqlite3
+randoneo_memory.sqlite
+
+# Logs
+*.log
