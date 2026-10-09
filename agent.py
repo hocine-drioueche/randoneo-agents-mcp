@@ -2,6 +2,7 @@
 Agent Randoneo — sans aucun outil en dur.
 
 Les capacités viennent du serveur MCP (randoneo_support.py).
+Le garde-fou humain est géré dans chat.py.
 """
 
 import asyncio
@@ -28,7 +29,6 @@ SYSTEM_PROMPT = (
     "Réponds en français, de façon concise et professionnelle."
 )
 
-# Le client MCP (stdio)
 client = MultiServerMCPClient({
     "randoneo": {
         "command": "python",
@@ -48,14 +48,12 @@ client = MultiServerMCPClient({
 # ============================================================
 
 async def build_agent(checkpointer):
-    """Charge les tools du serveur MCP et construit l'agent avec mémoire."""
-    # 1. Charge les tools depuis le serveur MCP
-    tools = await client.get_tools()
-    print(f"✅ {len(tools)} tools chargés depuis le MCP :")
-    for tool in tools:
-        print(f"   - {tool.name}")
+    """Charge les tools du serveur MCP et construit l'agent."""
+    mcp_tools = await client.get_tools()
+    print(f"✅ {len(mcp_tools)} tools chargés depuis le MCP")
+    for tool_item in mcp_tools:
+        print(f"   - {tool_item.name}")
     
-    # 2. Crée le modèle
     model = init_chat_model(
         "claude-haiku-4-5",
         model_provider="anthropic",
@@ -63,10 +61,9 @@ async def build_agent(checkpointer):
         max_retries=8,
     )
     
-    # 3. Crée l'agent avec checkpointer
     agent = create_agent(
         model,
-        tools,
+        mcp_tools,
         system_prompt=SYSTEM_PROMPT,
         checkpointer=checkpointer,
     )
@@ -81,18 +78,16 @@ async def build_agent(checkpointer):
 async def main():
     DB = "randoneo_memory.sqlite"
     
-    # Ouvre la base SQLite (asynchrone)
     async with AsyncSqliteSaver.from_conn_string(DB) as checkpointer:
         agent = await build_agent(checkpointer)
         
         print("\n" + "=" * 60)
-        print("Test de la mémoire")
+        print("Test de l'agent")
         print("=" * 60 + "\n")
         
-        # Configuration du thread
-        config = {"configurable": {"thread_id": "camille-1"}}
+        config = {"configurable": {"thread_id": "test-1"}}
         
-        # Test 1 : première question
+        # Test 1
         print("❓ Test 1 : Où en est ma commande RND-10235 ?")
         result = await agent.ainvoke(
             {"messages": [HumanMessage("Où en est ma commande RND-10235 ?")]},
@@ -100,10 +95,10 @@ async def main():
         )
         print(f"💬 {result['messages'][-1].content}\n")
         
-        # Test 2 : question de suivi (sans répéter le numéro)
-        print("❓ Test 2 : Et elle arrive quand, exactement ?")
+        # Test 2
+        print("❓ Test 2 : Et elle arrive quand ?")
         result = await agent.ainvoke(
-            {"messages": [HumanMessage("Et elle arrive quand, exactement ?")]},
+            {"messages": [HumanMessage("Et elle arrive quand ?")]},
             config,
         )
         print(f"💬 {result['messages'][-1].content}\n")
