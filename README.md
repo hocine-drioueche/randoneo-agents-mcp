@@ -41,7 +41,7 @@ capacités viennent d'un **serveur MCP** dédié.
 ### Pipeline  (vue simplifiée)
 ![Pipeline](docs/architecture.png)
 
-*Le pipeline en 2 phases : indexation (hors ligne) et requête (en ligne).*
+
 
 ### Diagramme détaillé
 ![Diagramme détaillé](docs/diagram.png)
