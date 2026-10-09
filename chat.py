@@ -2,7 +2,7 @@
 Boucle de chat interactive pour l'assistant Randoneo.
 
 - Streaming des étapes
-- Garde-fou humain (géré manuellement)
+- Garde-fou humain (interrupt)
 - Mémoire persistante (SQLite)
 """
 
@@ -13,15 +13,12 @@ import uuid
 from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
-from langchain_core.messages import (
-    AIMessage,
-    HumanMessage,
-    ToolMessage,
-)
+from langchain_core.messages import HumanMessage
+from langchain_core.tools import StructuredTool
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
+from langgraph.types import Command, interrupt
 
-# Charge le .env
 load_dotenv()
 
 
@@ -32,11 +29,12 @@ load_dotenv()
 SYSTEM_PROMPT = (
     "Tu es l'assistant du support client de Randoneo, un vendeur de matériel "
     "de randonnée. Utilise tes outils pour renseigner le client. "
-    "Réponds en français, de façon concise et professionnelle."
+    "Réponds en français, de façon concise et professionnelle. "
+    "Si une action est refusée par l'opérateur, annonce clairement au client "
+    "qu'aucune demande n'a été enregistrée, sans réessayer."
 )
 
-# Tools qui nécessitent une validation humaine
-SENSITIVE_TOOLS = {"create_ticket"}
+TOOLS_SENSIBLES = {"create_ticket"}
 
 client = MultiServerMCPClient({
     "randoneo": {
@@ -53,13 +51,50 @@ client = MultiServerMCPClient({
 
 
 # ============================================================
+# GARDE-FOU HUMAIN
+# ============================================================
+
+def avec_validation_humaine(mcp_tool):
+    """Enveloppe un tool MCP découvert : demande le feu vert avant de déléguer."""
+    async def _garde(**kwargs):
+        decision = interrupt({
+            "action": mcp_tool.name,
+            "args": kwargs,
+        })
+        
+        if isinstance(decision, dict) and decision.get("approved"):
+            return await mcp_tool.ainvoke(kwargs)
+        
+        return (
+            f"Action « {mcp_tool.name} » refusée par l'opérateur humain : "
+            "aucun ticket n'a été créé."
+        )
+    
+    return StructuredTool(
+        name=mcp_tool.name,
+        description=mcp_tool.description,
+        args_schema=mcp_tool.args_schema,
+        coroutine=_garde,
+    )
+
+
+# ============================================================
 # CONSTRUCTION DE L'AGENT
 # ============================================================
 
 async def build_agent(checkpointer):
-    """Charge les tools du serveur MCP et construit l'agent."""
+    """Charge les tools du serveur MCP, protège les sensibles, construit l'agent."""
     mcp_tools = await client.get_tools()
-    print(f"✅ {len(mcp_tools)} tools chargés depuis le MCP")
+    
+    tools = [
+        avec_validation_humaine(t) if t.name in TOOLS_SENSIBLES else t
+        for t in mcp_tools
+    ]
+    
+    print(f"✅ {len(tools)} tools chargés")
+    for t in tools:
+        marque = " 🔒" if t.name in TOOLS_SENSIBLES else ""
+        print(f"   - {t.name}{marque}")
     
     model = init_chat_model(
         "claude-haiku-4-5",
@@ -68,66 +103,12 @@ async def build_agent(checkpointer):
         max_retries=8,
     )
     
-    agent = create_agent(
+    return create_agent(
         model,
-        mcp_tools,
+        tools,
         system_prompt=SYSTEM_PROMPT,
         checkpointer=checkpointer,
     )
-    
-    return agent, mcp_tools
-
-
-# ============================================================
-# GARDE-FOU HUMAIN (manuel)
-# ============================================================
-
-async def handle_sensitive_tools(agent, config, state):
-    """
-    Vérifie si le dernier message contient un tool_use sensible.
-    Si oui, demande validation à l'opérateur.
-    """
-    last_message = state.values["messages"][-1]
-    
-    # Vérifie s'il y a un tool_use
-    if not isinstance(last_message, AIMessage):
-        return None
-    
-    if not last_message.tool_calls:
-        return None
-    
-    # Cherche un tool sensible
-    sensitive_calls = [
-        call for call in last_message.tool_calls
-        if call["name"] in SENSITIVE_TOOLS
-    ]
-    
-    if not sensitive_calls:
-        return None
-    
-    # Affiche la demande de validation
-    call = sensitive_calls[0]
-    print("\n" + "=" * 60)
-    print("  ⚠️  VALIDATION HUMAINE REQUISE")
-    print("=" * 60)
-    print(f"  Action : {call['name']}")
-    print(f"  Arguments :")
-    for key, value in call["args"].items():
-        print(f"    - {key} : {value}")
-    print("=" * 60)
-    
-    # Demande la décision
-    while True:
-        decision = input("\n  Approuver ? (o/n) : ").strip().lower()
-        if decision in ("o", "oui", "y", "yes"):
-            approved = True
-            break
-        elif decision in ("n", "non", "no"):
-            approved = False
-            break
-        print("  Répondez par 'o' ou 'n'.")
-    
-    return approved
 
 
 # ============================================================
@@ -138,19 +119,15 @@ async def chat():
     DB = "randoneo_memory.sqlite"
     
     async with AsyncSqliteSaver.from_conn_string(DB) as checkpointer:
-        agent, mcp_tools = await build_agent(checkpointer)
+        agent = await build_agent(checkpointer)
         
         print("\n" + "=" * 60)
         print("  Assistant de support Randoneo")
         print("  Tapez 'quit' pour quitter.")
         print("=" * 60 + "\n")
         
-        # Un thread_id par session
         thread_id = f"session-{uuid.uuid4().hex[:8]}"
         config = {"configurable": {"thread_id": thread_id}}
-        
-        # Dictionnaire des tools pour exécution manuelle
-        tools_dict = {t.name: t for t in mcp_tools}
         
         while True:
             try:
@@ -169,63 +146,46 @@ async def chat():
             print()
             
             try:
-                # Lance l'agent
-                result = await agent.ainvoke(
-                    {"messages": [HumanMessage(question)]},
-                    config,
-                )
+                # Boucle : on relance tant qu'il y a des interruptions
+                entree = {"messages": [HumanMessage(question)]}
                 
-                # Boucle tant qu'il y a des tool_use à traiter
                 while True:
-                    # Récupère l'état
-                    state = await agent.aget_state(config)
+                    result = await agent.ainvoke(entree, config)
                     
-                    # Vérifie s'il y a un tool_use sensible
-                    approved = await handle_sensitive_tools(agent, config, state)
+                    # Vérifie s'il y a une interruption
+                    interruptions = result.get("__interrupt__")
                     
-                    if approved is None:
-                        # Pas de tool sensible → terminé
+                    if not interruptions:
+                        # Pas d'interruption → réponse finale
+                        print("-" * 60)
+                        print(f"💬 {result['messages'][-1].content}")
+                        print("-" * 60 + "\n")
                         break
                     
-                    # Récupère le dernier message
-                    last_message = state.values["messages"][-1]
-                    sensitive_call = next(
-                        call for call in last_message.tool_calls
-                        if call["name"] in SENSITIVE_TOOLS
-                    )
+                    # Interruption → demande validation
+                    interrupt_data = interruptions[0].value
+                    print("\n" + "=" * 60)
+                    print("  ⚠️  VALIDATION HUMAINE REQUISE")
+                    print("=" * 60)
+                    print(f"  Action : {interrupt_data['action']}")
+                    print(f"  Arguments :")
+                    for key, value in interrupt_data["args"].items():
+                        print(f"    - {key} : {value}")
+                    print("=" * 60)
                     
-                    # Exécute ou refuse
-                    if approved:
-                        print("\n  ✅ Approuvé. Exécution en cours...")
-                        tool = tools_dict[sensitive_call["name"]]
-                        tool_result = await tool.ainvoke(sensitive_call["args"])
-                        tool_message = ToolMessage(
-                            content=str(tool_result),
-                            tool_call_id=sensitive_call["id"],
-                        )
-                    else:
-                        print("\n  ❌ Refusé.")
-                        tool_message = ToolMessage(
-                            content="Action refusée par un opérateur.",
-                            tool_call_id=sensitive_call["id"],
-                        )
+                    # Demande décision
+                    while True:
+                        decision = input("\n  Approuver ? (o/n) : ").strip().lower()
+                        if decision in ("o", "oui", "y", "yes"):
+                            approved = True
+                            break
+                        elif decision in ("n", "non", "no"):
+                            approved = False
+                            break
+                        print("  Répondez par 'o' ou 'n'.")
                     
-                    # Injecte le tool_result
-                    await agent.aupdate_state(
-                        config,
-                        {"messages": [tool_message]},
-                    )
-                    
-                    # Reprend l'agent
-                    result = await agent.ainvoke(None, config)
-                
-                # Affiche la réponse finale
-                final_state = await agent.aget_state(config)
-                final_message = final_state.values["messages"][-1]
-                
-                print("\n" + "-" * 60)
-                print(f"💬 {final_message.content}")
-                print("-" * 60 + "\n")
+                    print()
+                    entree = Command(resume={"approved": approved})
             
             except Exception as e:
                 print(f"\n❌ Erreur : {e}\n")
